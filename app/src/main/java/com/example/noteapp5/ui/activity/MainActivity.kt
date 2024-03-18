@@ -10,8 +10,7 @@ import com.example.noteapp5.ui.App
 import com.example.noteapp5.ui.unitls.PreferenceHelper
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var navController : NavController
-    private lateinit var preferenceHelper: PreferenceHelper
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,17 +19,16 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment
 
-        navController = navHostFragment.navController
+       navController = navHostFragment.navController
 
-        preferenceHelper = PreferenceHelper()
-        preferenceHelper.init(applicationContext)
 
-        if (!preferenceHelper.isOnBoardShow) {
-            navController.navigate(R.id.onBoardFragment)
-            preferenceHelper.isOnBoardShow = true
-        } else {
+        if (PreferenceHelper.isOnBoardShown){
             navController.navigate(R.id.noteFragment)
-
+        }else{
+            navController.navigate(R.id.onBoardFragment)
         }
+
+
+
     }
 }

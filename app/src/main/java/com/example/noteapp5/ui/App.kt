@@ -7,7 +7,7 @@ class App: Application() {
 
     override fun onCreate(){
         super.onCreate()
-        val sharedPreferences = PreferenceHelper()
-        sharedPreferences.init(this)
+        val sharedPreferences = PreferenceHelper
+        sharedPreferences.unit(this)
     }
 }

@@ -16,15 +16,14 @@ import com.example.noteapp5.ui.unitls.PreferenceHelper
 
 class OnBoardFragment : Fragment() {
     private lateinit var binding: FragmentOnBoardBinding
-    private lateinit var preferenceHelper: PreferenceHelper
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentOnBoardBinding.inflate(layoutInflater)
-        preferenceHelper = PreferenceHelper()
-        preferenceHelper.init(requireContext())
+
         return binding.root
     }
 
@@ -33,13 +32,16 @@ class OnBoardFragment : Fragment() {
         initialize()
         setupListener()
         setVisible()
-        if (!preferenceHelper.isOnBoardShow) {
-            preferenceHelper.isOnBoardShow = true
-        }
+        flad()
+    }
+
+    private fun flad() {
+        PreferenceHelper.isOnBoardShown = true
     }
 
     private fun initialize() {
         binding.viewPager.adapter = OnBoardViewPagerAdapter(this)
+        PreferenceHelper.unit(requireContext())
     }
 
     private fun setupListener() = with(binding.viewPager) {
