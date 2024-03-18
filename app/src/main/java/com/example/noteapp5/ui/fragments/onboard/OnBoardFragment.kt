@@ -32,12 +32,10 @@ class OnBoardFragment : Fragment() {
         initialize()
         setupListener()
         setVisible()
-        flad()
+        flag()
     }
 
-    private fun flad() {
-        PreferenceHelper.isOnBoardShown = true
-    }
+
 
     private fun initialize() {
         binding.viewPager.adapter = OnBoardViewPagerAdapter(this)
@@ -83,7 +81,9 @@ class OnBoardFragment : Fragment() {
         })
 
     }
-
+    private fun flag() {
+        PreferenceHelper.isOnBoardShown = true
+    }
 
 
 }
