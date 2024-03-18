@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.note.NoteFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#131212"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_menu" />
+
+        <TextView
+            android:id="@+id/note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="110dp"
+            android:text="@string/note"
+            android:textColor="#b1b1b1"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:src="@drawable/ic_shape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+             />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:background="@color/black"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="22dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/bg_edit"
+            android:hint="@string/search"
+            android:padding="18dp"
+            android:paddingStart="15dp"
+            android:textAlignment="center"
+            android:textColorHint="#3b3b3b"
+            android:textSize="16sp"
+            tools:ignore="RtlSymmetry" />
+
+
+
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_plus"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="20dp"
+        android:backgroundTint="#FFC107"
+        android:text="@string/plus"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
