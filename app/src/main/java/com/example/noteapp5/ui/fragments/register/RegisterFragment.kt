@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.noteapp5.R
 import com.example.noteapp5.databinding.FragmentRegisterBinding
+import com.example.noteapp5.unitls.PreferenceHelper
 import com.google.firebase.Firebase
 import com.google.firebase.FirebaseException
 import com.google.firebase.FirebaseTooManyRequestsException
@@ -128,6 +129,7 @@ class RegisterFragment : Fragment() {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithCredential:success")
+                    PreferenceHelper.onShowed()
                     findNavController().navigate(R.id.noteFragment)
                     val user = task.result?.user
                 } else {
