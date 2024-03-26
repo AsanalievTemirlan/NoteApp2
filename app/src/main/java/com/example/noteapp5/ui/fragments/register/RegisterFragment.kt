@@ -1,4 +1,4 @@
-package com.example.noteapp5.ui.fragments.Regiiste
+package com.example.noteapp5.ui.fragments.register
 
 import android.content.ContentValues.TAG
 import android.os.Bundle

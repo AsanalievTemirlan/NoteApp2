@@ -27,7 +27,7 @@
         tools:layout="@layout/fragment_note_detail" />
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.noteapp5.ui.fragments.Regiiste.RegisterFragment"
+        android:name="com.example.noteapp5.ui.fragments.register.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" />
 </navigation>
