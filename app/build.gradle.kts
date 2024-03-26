@@ -3,6 +3,8 @@ plugins {
     id("org.jetbrains.kotlin.android")
     //SafeArgs
     id("androidx.navigation.safeargs")
+    //Ksp
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -51,10 +53,16 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     //Nav
-    val nav_version = "2.7.7"
-    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
-    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+    val navVersion = "2.7.7"
+    implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
+    implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
 
+    //Lottie
     val lottieVersion = "6.4.0"
     implementation("com.airbnb.android:lottie:$lottieVersion")
+
+    //ROOM
+    val roomVersion = "2.6.1"
+    implementation("androidx.room:room-ktx:$roomVersion")
+    ksp("androidx.room:room-compiler:$roomVersion")
 }

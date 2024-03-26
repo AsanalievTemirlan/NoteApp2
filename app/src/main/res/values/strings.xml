@@ -8,4 +8,6 @@
     <string name="note">Заметки</string>
     <string name="plus">+</string>
     <string name="search">Поиск заметок</string>
+    <string name="finish">Готово</string>
+    <string name="title">Название</string>
 </resources>

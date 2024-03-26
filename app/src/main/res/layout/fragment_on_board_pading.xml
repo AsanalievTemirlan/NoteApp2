@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragments.onboard.OnBoardPadingFragment">
+    tools:context=".ui.fragments.onboard.OnBoardPadingFragment"
+    android:background="@color/black">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"

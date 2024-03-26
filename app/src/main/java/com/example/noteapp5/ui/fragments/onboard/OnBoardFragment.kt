@@ -7,11 +7,12 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.example.noteapp5.R
 import com.example.noteapp5.databinding.FragmentOnBoardBinding
 import com.example.noteapp5.ui.adapter.OnBoardViewPagerAdapter
-import com.example.noteapp5.ui.unitls.PreferenceHelper
+import com.example.noteapp5.unitls.PreferenceHelper
 
 
 class OnBoardFragment : Fragment() {
@@ -33,6 +34,10 @@ class OnBoardFragment : Fragment() {
         setupListener()
         setVisible()
         flag()
+        binding.tvStartWork.setOnClickListener{
+            PreferenceHelper.onShowed()
+            findNavController().navigate(R.id.noteFragment)
+        }
     }
 
 
@@ -51,7 +56,6 @@ class OnBoardFragment : Fragment() {
         binding.tvStartWork.setOnClickListener {
             if (binding.viewPager.currentItem == 2) {
                 findNavController().navigate(R.id.noteFragment)
-
             }
 
         }
