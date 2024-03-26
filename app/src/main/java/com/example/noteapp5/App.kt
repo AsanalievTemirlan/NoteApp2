@@ -1,4 +1,4 @@
-package com.example.noteapp5.ui
+package com.example.noteapp5
 
 import android.app.Application
 import androidx.room.Room

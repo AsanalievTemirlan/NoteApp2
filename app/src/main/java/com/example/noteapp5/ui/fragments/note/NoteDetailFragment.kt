@@ -1,7 +1,5 @@
 package com.example.noteapp5.ui.fragments.note
 
-import android.graphics.Color
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -9,14 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
-import androidx.annotation.DrawableRes
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.noteapp5.R
 import com.example.noteapp5.data.model.NoteModel
 import com.example.noteapp5.databinding.FragmentNoteDetailBinding
-import com.example.noteapp5.ui.App
+import com.example.noteapp5.App
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*

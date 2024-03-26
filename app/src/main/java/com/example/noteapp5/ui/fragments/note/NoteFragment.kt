@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.noteapp5.R
 import com.example.noteapp5.databinding.FragmentNoteBinding
 import com.example.noteapp5.ui.adapter.NoteAdapter
-import com.example.noteapp5.ui.App
+import com.example.noteapp5.App
 
 class NoteFragment : Fragment() {
     private lateinit var adapter: NoteAdapter

@@ -5,6 +5,8 @@ plugins {
     id("androidx.navigation.safeargs")
     //Ksp
     id("com.google.devtools.ksp")
+    //FireBase
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -65,4 +67,9 @@ dependencies {
     val roomVersion = "2.6.1"
     implementation("androidx.room:room-ktx:$roomVersion")
     ksp("androidx.room:room-compiler:$roomVersion")
+
+    //FireBase
+    implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-auth")
 }

@@ -10,4 +10,10 @@
     <string name="search">Поиск заметок</string>
     <string name="finish">Готово</string>
     <string name="title">Название</string>
+    <string name="reg">Регистрация по номеру</string>
+    <string name="number">+996 707 777 777</string>
+    <string name="your_code">Ваш код</string>
+    <string name="get_code">Получить код</string>
+    <string name="confirm">Потвердить</string>
+    <string name="send_again">Отправить снова</string>
 </resources>

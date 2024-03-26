@@ -3,12 +3,8 @@ package com.example.noteapp5.ui.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
-import androidx.navigation.NavDestination
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.noteapp5.R
-import com.example.noteapp5.ui.App
-import com.example.noteapp5.ui.fragments.note.NoteFragment
 import com.example.noteapp5.unitls.PreferenceHelper
 
 class MainActivity : AppCompatActivity() {
@@ -27,7 +23,7 @@ class MainActivity : AppCompatActivity() {
             navController.navigate(R.id.onBoardFragment)
             PreferenceHelper.isOnBoardShown = false
         }else{
-            navController.navigate(R.id.noteFragment)
+            navController.navigate(R.id.registerFragment)
         }
 
     /*    navController.addOnDestinationChangedListener(object :NavController.OnDestinationChangedListener{
